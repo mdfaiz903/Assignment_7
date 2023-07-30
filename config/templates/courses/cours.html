@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+   
+    
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <h1>Hello bangladesh</h1>
+  <h2>  {{c1 | upper | join:'- '}}</h2>
+  <h2>  {{c2 | lower }}</h2>
+  <h2>  {{c3 | capfirst | add:" 60 days"}}</h2>
+  <h4>List :</h4>
+    <ul>
+      {% for i in list %}
+      <li> {{i}}</li>
+      {% endfor %}
+    </ul>
+      
+      {% if c4 == 6  %}
+      <h5>if block is excuted</h5>
+      {% elif c5 ==  'odd1' %}
+      <h5>elif block is excuted</h5>
+      {% else %}
+      <h5>else block excuted</h5>
+      
+      {% endif %}
+  {% endblock content %}
+   
+</body>
+</html>
